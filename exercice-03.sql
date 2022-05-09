@@ -66,7 +66,7 @@ WHERE start_date >= '2021-01-01' AND start_date <= '2021-07-01';
 -- - OU ayant un projet
 SELECT *
 FROM student
-WHERE email LIKE '%.fr%' OR project_id IS NOT NULL;
+WHERE email LIKE '%.fr%' AND create_date <= '2021-01-10' AND  project_id IS NULL;
 
 -- Exo 3.8
 -- Listez les students :
@@ -74,7 +74,7 @@ WHERE email LIKE '%.fr%' OR project_id IS NOT NULL;
 -- - ET n'ayant pas de projet
 SELECT *
 FROM student
-WHERE email LIKE '%.fr%' AND create_date <= '2021-01-10' AND  project IS NULL;
+WHERE email LIKE '%.fr%' AND create_date <= '2021-01-10' AND  project_id IS NOT NULL;
 
 
 
