@@ -1,0 +1,21 @@
+entité,colonne,type,taille,optionnel (nullable),valeur par défaut,remarques
+user,id,integer,,,,Incrément Automatique
+user,mail,varchar,190,,,Doit être une adresse mail
+user,password,varchar,190,,,
+,,,,,,
+category,id,integer,,,,Incrément Automatique
+category,name,varchar,190,,,
+,,,,,,
+task,id,integer,,,,Incrément Automatique
+task,title,varchar,190,,,
+task,end_date,datetime,,,,
+task,delete_date,datetime,,oui,,Permet un soft delete
+task,done,boolean,,,false,
+task,user_id,integer,,,,Foreign key de user.id
+task,category_id,integer,,,,Foreign key de category.id
+,,,,,,
+tag,id,integer,,,,Incrément Automatique
+tag,name,varchar,190,,,
+,,,,,,
+tag_task,task_id,integer,,,,Foreign key de task.id
+tag_task,tag_id,integer,,,,Foreign key de tag.id
